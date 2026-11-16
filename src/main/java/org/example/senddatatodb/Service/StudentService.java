@@ -20,7 +20,7 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    // CREATE
+
     @Transactional
     public StudentResponse createStudent(StudentRequest request) {
 
@@ -40,7 +40,7 @@ public class StudentService {
         return mapToResponse(savedStudent);
     }
 
-    // READ ALL
+
     @Transactional(readOnly = true)
     public List<StudentResponse> getAllStudents() {
 
@@ -50,7 +50,7 @@ public class StudentService {
                 .toList();
     }
 
-    // READ ONE
+
     @Transactional(readOnly = true)
     public StudentResponse getStudentById(Long id) {
 
@@ -59,7 +59,7 @@ public class StudentService {
         return mapToResponse(student);
     }
 
-    // UPDATE
+
     @Transactional
     public StudentResponse updateStudent(Long id, StudentRequest request) {
 
@@ -86,7 +86,7 @@ public class StudentService {
         return mapToResponse(updatedStudent);
     }
 
-    // DELETE
+
     @Transactional
     public void deleteStudent(Long id) {
 
